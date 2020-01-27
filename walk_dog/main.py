@@ -1,37 +1,47 @@
 #!/usr/bin/env pybricks-micropython
 
-from pybricks import ev3brick as brick
-from pybricks.ev3devices import (Motor, TouchSensor, ColorSensor,
-                                 InfraredSensor, UltrasonicSensor, GyroSensor)
-from pybricks.parameters import (Port, Stop, Direction, Button, Color,
-                                 SoundFile, ImageFile, Align)
-from pybricks.tools import print, wait, StopWatch
-from pybricks.robotics import DriveBase
+# from pybricks import ev3brick as brick
+# from pybricks.ev3devices import (Motor, TouchSensor, ColorSensor,
+#                                  InfraredSensor, UltrasonicSensor, GyroSensor)
+# from pybricks.parameters import (Port, Stop, Direction, Button, Color,
+#                                  SoundFile, ImageFile, Align)
+# from pybricks.tools import print, wait, StopWatch
+# from pybricks.robotics import DriveBase
 
-# Write your program here
-brick.sound.beep()
+from ev3dev2.motor import OUTPUT_A, OUTPUT_D, MoveTank
+from ev3dev2.sensor.lego import UltrasonicSensor, InfraredSensor
+from ev3dev2.sensor import INPUT_1
+import time
 
-motor_l = Motor(Port.A)
-motor_r = Motor(Port.D)
+# def top_left_channel_1_action(state):
+#     print("top left on channel 1: %s" % state)
 
-#init a infrared sensor
-infrared = InfraredSensor(Port.S3)
+# def bottom_right_channel_4_action(state):
+#     print("bottom right on channel 4: %s" % state)
 
-robot = DriveBase(motor_l, motor_r, 56, 114)
-sensor = UltrasonicSensor(Port.S1)
+# ir = InfraredSensor()
+# ir.on_channel1_top_left = top_left_channel_1_action
+# ir.on_channel4_bottom_right = bottom_right_channel_4_action
 
-robot.drive(300,0)
-while sensor.distance() > 200:
-    wait(10)
-robot.stop()
 # while True:
-#     # distance_current = infrared.distance()
-#     # print(distance_current)
-#     beacon_position_tuple = infrared.beacon(1)
-#     print(beacon_position_tuple)
-#    # wait(1000)
+#     ir.process()
+#     time.sleep(0.01)
 
-#     brick.display.clear()
-#     brick.display.text(beacon_position_tuple[0], (30, 20))
-#     brick.display.text(beacon_position_tuple[1], (30, 40))
 
+tank_drive = MoveTank(OUTPUT_A, OUTPUT_D)
+#tank_drive.cs = ColorSensor()
+ultra_sensor = UltrasonicSensor()
+
+def drive_backword_by_round(wheel_round):
+    tank_drive.on_for_rotations(-30, -30, wheel_round)
+
+def drive_turn_left():
+    tank_drive.on_for_rotations(0, 20, 1)
+
+while True:
+    tank_drive.on(30, 30)
+    distance = ultra_sensor.distance_centimeters
+    if (distance < 30):
+        drive_backword_by_round(1)
+        drive_turn_left()
+        time.sleep(0.2)
