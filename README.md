@@ -14,5 +14,6 @@ The following pic shows the detection range of infrared sensor
 The following pic shows the ralationship between the heading value of infrared sensor and the steering value of move steering motor set.
 <img src="https://github.com/haiyongsong1921/EV3-classroom/blob/master/infra_sensor_walk_dog/heading_to_steering.png" width="400">
 The following gif is the short demo for this project
-<img src="https://github.com/haiyongsong1921/EV3-classroom/blob/master/infra_sensor_walk_dog/demo.gif" width="400">
+<img src="https://github.com/haiyongsong1921/EV3-classroom/blob/master/infra_sensor_walk_dog/demo.gif" width="100px" height="200px">
+
 
