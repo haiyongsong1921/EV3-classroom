@@ -26,6 +26,6 @@ ultra_sensor = UltrasonicSensor()
 while True:
     tank_drive.on(30, 30)
     distance = ultra_sensor.distance_centimeters
-    if (distance < 30):
+    if (distance < 20):
         tank_drive.drive_turn_left()
         time.sleep(0.2)
