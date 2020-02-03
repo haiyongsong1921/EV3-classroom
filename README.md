@@ -12,10 +12,11 @@ The ev3 will use infrared sensor in SEEK mode, the robot will run and follow the
 The following gif is the short demo for this project
 <img src="https://github.com/haiyongsong1921/EV3-classroom/blob/master/infra_sensor_walk_dog/demo.gif" width="100px" height="200px">
 3. infrared_remote_control
-You can control the ev3 robot moving by pressing the buttons on infrared sensor. 
-top_left: turn left,
-top_right: turn right,
-top_left + top_right: run forward,
-bottom_left + bottom_rigth: run backward
+You can control the ev3 robot moving by pressing the buttons on infrared sensor.  
+
+top_left: turn left,  
+top_right: turn right,  
+top_left + top_right: run forward,  
+bottom_left + bottom_rigth: run backward  
 
 
