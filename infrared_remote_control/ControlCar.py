@@ -1,5 +1,6 @@
-from ev3dev2.motor import MoveSteering, SpeedPercent, 
+from ev3dev2.motor import MoveSteering, SpeedPercent
 from ev3dev2.sensor.lego import InfraredSensor
+from ev3dev2.sound import Sound
 import sys
 import math
 
@@ -22,13 +23,17 @@ class ControlCar:
         # else:
         #     self.__movesteering.off()
     def __run_forward(self):
-        self.__movesteering.on(0, 30)
+        self.__movesteering.on(0, 50)
 
     def __run_backward(self):
         self.__movesteering.on(0, -20)
 
     def __stop(self):
         self.__movesteering.off()
+
+    def __play_text_sound(self, words):
+        sound = Sound()
+        sound.speak(words)
 
     def __get_button_pressed_value(self, buttons):
         BUTTON_VALUES = {
@@ -56,6 +61,8 @@ class ControlCar:
             self.__run_forward()
         elif(button_value == 8):
             self.__run_backward()
+        elif(button_value == 2):
+            self.__play_text_sound("Lily, I love you")
         else:
             self.__stop()
 
