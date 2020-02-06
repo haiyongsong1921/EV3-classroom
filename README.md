@@ -24,3 +24,5 @@ The following gif is the short demo for this project.[头条教学视频](https:
 | top_left + top_right  | run forward  |
 | bottom_left + bottom_rigth  | run backward  |
 
+## 4. touch_and_sound
+> The car will run forward until the touch sensor was pressed. It will speak out "ouch" and then it will backward left to change the direction, after that, it will run forward again. Its' path is same as "avoid_block".
