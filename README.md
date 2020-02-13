@@ -26,3 +26,7 @@ The following gif is the short demo for this project.[头条教学视频](https:
 
 ## 4. touch_and_sound
 > The car will run forward until the touch sensor was pressed. It will speak out "ouch" and then it will backward left to change the direction, after that, it will run forward again. Its' path is same as "avoid_block".[头条教学视频](https://www.ixigua.com/i6790328038149063176/)
+
+## 5. color_sensor_and_medium_motor
+> Introduce the color sensor, it will speak out the color name when a color is detected by the sensor. 
+> Introduce the medium motor, it works just like a normal motor. it will rotate for 50 degrees when the Infrared beacon button is pressed.[头条教学视频](https://www.ixigua.com/i6792509641545744907/)
