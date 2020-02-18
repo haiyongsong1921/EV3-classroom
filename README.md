@@ -30,3 +30,8 @@ The following gif is the short demo for this project.[头条教学视频](https:
 ## 5. color_sensor_and_medium_motor
 > Introduce the color sensor, it will speak out the color name when a color is detected by the sensor. 
 > Introduce the medium motor, it works just like a normal motor. it will rotate for 50 degrees when the Infrared beacon button is pressed.[头条教学视频](https://www.ixigua.com/i6792509641545744907/)
+
+## 6. led_and_button
+> Use buttons on the ev3 brick to control the leds light.[头条教学视频](https://www.ixigua.com/i6793277260485886471/)
+
+
