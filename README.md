@@ -34,4 +34,6 @@ The following gif is the short demo for this project.[头条教学视频](https:
 ## 6. led_and_button
 > Use buttons on the ev3 brick to control the leds light.[头条教学视频](https://www.ixigua.com/i6793277260485886471/)
 
+## 7. auto_drive
+> the ev3 robot will run forward until there is a block in front on it and the distance between them is less than 20cm, then the robot car will stop and use infrared sensor to scan from left to right and choose the clearest direction to turn.
 
