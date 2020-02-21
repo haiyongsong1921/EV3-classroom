@@ -8,7 +8,7 @@ all program that run one ev3
 
 <img src="https://github.com/haiyongsong1921/EV3-classroom/blob/master/avoid_block/drive_path.png" width="300">
 
-## 2. walk_dog  
+## 2. infra_sensor_walk_dog
 > The ev3 will use infrared sensor in SEEK mode, the robot will run and follow the ifrared beacon move path, there's one holding  the beacon and walk then the robot will follow him, just like a man walking a dog.
 The following gif is the short demo for this project.[头条教学视频](https://www.ixigua.com/i6788462217063825931/)  
 
@@ -35,5 +35,8 @@ The following gif is the short demo for this project.[头条教学视频](https:
 > Use buttons on the ev3 brick to control the leds light.[头条教学视频](https://www.ixigua.com/i6793277260485886471/)
 
 ## 7. auto_drive
-> the ev3 robot will run forward until there is a block in front on it and the distance between them is less than 20cm, then the robot car will stop and use infrared sensor to scan from left to right and choose the clearest direction to turn.
+> The ev3 robot will run forward until there is a block in front on it and the distance between them is less than 20cm, then the robot car will stop and use infrared sensor to scan from left to right and choose the clearest direction to turn.[头条教学视频](https://www.ixigua.com/i6795157255739146765/)
+
+## 8. drive_slope
+> The ev3 robot will run up a slop, and it will stop running automatically when it reaches to the top. It uses gyro sensor to ajust it is on a slop or flat.  [头条教学视频](https://www.ixigua.com/i6795861098114318856/)
 
